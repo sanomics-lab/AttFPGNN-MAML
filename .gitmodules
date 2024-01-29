@@ -1,0 +1,3 @@
+[submodule "ADKF-IFT"]
+	path = ADKF-IFT
+	url = https://github.com/Wenlin-Chen/ADKF-IFT.git
