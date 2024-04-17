@@ -10,8 +10,8 @@ sys.path.insert(0, str(project_root()))
 
 from fs_mol.data import FSMolDataset
 from fs_mol.models.abstract_torch_fsmol_model import resolve_starting_model_file
-from fs_mol.meta_mol_relation.meta_mol_relation_model import MetaMolRelationModel
-from fs_mol.meta_mol_relation.meta_mol_relation_utils import (
+from meta_mol_relation_model import MetaMolRelationModel
+from meta_mol_relation_utils import (
     MetaMolRelationModelTrainer,
     evaluate_metamolrelation_model
 )

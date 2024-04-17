@@ -17,8 +17,8 @@ sys.path.insert(0, str(project_root()))
 
 from fs_mol.models.abstract_torch_fsmol_model import linear_warmup
 from fs_mol.data import FSMolDataset, FSMolTaskSample, DataFold
-from fs_mol.meta_mol_relation.meta_mol_relation_model import MetaMolRelationConfig, MetaMolRelationModel
-from fs_mol.meta_mol_relation.meta_mol_relation_data import (
+from meta_mol_relation_model import MetaMolRelationConfig, MetaMolRelationModel
+from meta_mol_relation_data import (
     get_metamolrelation_task_sample_iterable, 
     MetaMolRelationBatch,
     get_metamolrelation_batcher,
@@ -35,7 +35,7 @@ from fs_mol.utils.metric_logger import MetricLogger
 from fs_mol.utils.torch_utils import torchify
 from fs_mol.utils.test_utils import eval_model, FSMolTaskSampleEvalResults
 
-from fs_mol.meta_mol_relation.cosine_annealing_warmup_scheduler import CosineAnnealingWarmupRestarts
+from cosine_annealing_warmup_scheduler import CosineAnnealingWarmupRestarts
 
 
 logger = logging.getLogger(__name__)

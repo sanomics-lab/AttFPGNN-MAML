@@ -9,7 +9,7 @@ from fs_mol.modules.graph_feature_extractor import (
     GraphFeatureExtractor,
     GraphFeatureExtractorConfig,
 )
-from fs_mol.meta_mol_relation.meta_mol_relation_data import MetaMolRelationBatch
+from meta_mol_relation_data import MetaMolRelationBatch
 
 
 FINGERPRINT_DIM = 2048

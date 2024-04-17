@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from typing import List, Optional, Iterable, Tuple, Dict, Any
 import dataclasses
 import logging
+import os
 
 import numpy as np
 from dpu_utils.utils.richpath import RichPath
@@ -23,9 +24,11 @@ logger = logging.getLogger(__name__)
 
 import json
 
-all_fps = np.load("fs_mol/meta_mol_relation/all_fps.npy")
-# all_pharm_graphs = np.load("fs_mol/meta_mol_relation/all_pharm_graph.npy", allow_pickle=True)
-with open("fs_mol/meta_mol_relation/all_smis.list") as fr:
+current_folder = os.path.abspath(os.path.dirname(__file__))
+all_fps = np.load(os.path.join(current_folder, "all_fps.npy"))
+
+# all_pharm_graphs = np.load(os.path.join(current_folder, "all_pharm_graph.npy"), allow_pickle=True)
+with open(os.path.join(current_folder, "all_smis.list")) as fr:
     all_smis = json.load(fr)
 smi2id = {smi: idx for idx, smi in enumerate(all_smis)}
 

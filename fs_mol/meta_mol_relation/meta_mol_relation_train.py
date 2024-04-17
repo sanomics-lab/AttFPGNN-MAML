@@ -17,7 +17,7 @@ from fs_mol.modules.graph_feature_extractor import (
     make_graph_feature_extractor_config_from_args,
 )
 from fs_mol.utils.cli_utils import add_train_cli_args, set_up_train_run
-from fs_mol.meta_mol_relation.meta_mol_relation_utils import (
+from meta_mol_relation_utils import (
     MetaMolRelationTrainerConfig,
     MetaMolRelationModelTrainer
 )
