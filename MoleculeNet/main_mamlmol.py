@@ -2,9 +2,14 @@
 import os
 print('pid:', os.getpid())
 
+import sys
+current_folder = os.path.abspath(os.path.dirname(__file__))
+sys.path.insert(0, os.path.join(current_folder, "../ADKF-IFT/MoleculeNet/"))
+
 from time import time
-from parser import get_args
-from chem_lib.models import MamlMolRelationModel, MamlMolRelationTrainer
+from parser_mamlmol import get_args
+from maml_mol_relation_model import MamlMolRelationModel
+from maml_mol_relation_trainer import MamlMolRelationTrainer
 from chem_lib.utils import count_model_params
 
 

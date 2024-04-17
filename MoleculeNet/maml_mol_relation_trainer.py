@@ -12,9 +12,9 @@ import torch.optim as optim
 from torchmetrics.functional import auroc
 from torch_geometric.data import DataLoader
 
-from ..datasets import sample_meta_datasets, sample_test_datasets, MoleculeDataset
-from ..utils import Logger
-from .maml_mol_relation_model import calculate_prototypes
+from chem_lib.datasets import sample_meta_datasets, sample_test_datasets, MoleculeDataset
+from chem_lib.utils import Logger
+from maml_mol_relation_model import calculate_prototypes
 
 
 class MamlMolRelationTrainer(nn.Module):

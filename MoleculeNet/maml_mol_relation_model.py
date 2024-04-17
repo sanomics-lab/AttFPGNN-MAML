@@ -1,3 +1,4 @@
+import os
 import json
 import torch
 import torch.nn as nn
@@ -8,17 +9,18 @@ import torch_scatter
 
 import gpytorch
 
-from .encoder import GNN_Encoder
+from chem_lib.models.encoder import GNN_Encoder
 
 
-all_fps = np.load("data/all_fps.npy")
-all_pharm_graphs = np.load("data/all_pharm_graph.npy", allow_pickle=True)
-with open("data/all_smis.list") as fr:
+current_folder = os.path.abspath(os.path.dirname(__file__))
+all_fps = np.load(os.path.join(current_folder, "data/all_fps.npy"))
+all_pharm_graphs = np.load(os.path.join(current_folder, "data/all_pharm_graph.npy"), allow_pickle=True)
+with open(os.path.join(current_folder, "data/all_smis.list")) as fr:
     all_smis = json.load(fr)
 smi2id = {smi: idx for idx, smi in enumerate(all_smis)}
 
-USE_ATTENTION = False
-USE_MIXED_FPS = False
+USE_ATTENTION = True
+USE_MIXED_FPS = True
 USE_PHARMACOPHORE = False
 
 USE_XEMBEDDING = False
