@@ -31,6 +31,6 @@ Meta learning with Attention based FP-GNN for few-shot molecular property predic
     cd ADKF-IFT/MoleculeNet && bash ../../MoleculeNet/run_train.sh
     ```
 
-**Model Checkpoint**
+**Model Checkpoint & precaculated fingerprints**
 
 You can download the precaculated fingerprints and model checkpoint from [Google Drive](!https://drive.google.com/file/d/12yT5euhQkbYFr8gZ0mllNAGXXDF0LVcK/view?usp=sharing). After downloading and extracting, you will obtain files related to fs_mol and MoleculeNet respectively.
