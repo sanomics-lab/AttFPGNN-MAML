@@ -11,22 +11,26 @@ Meta learning with Attention based FP-GNN for few-shot molecular property predic
 
 2. **train**
     ```
-    python fs_mol/meta_mol_relation/meta_mol_relation_train.py /path/to/data
+    cd ADKF-IFT && bash ../fs_mol/run_train.sh
     ```
 
 3. **test**
     ```
-    python fs_mol/meta_mol_relation/meta_mol_relation_test.py /path/to/pn-checkpoint /path/to/data
+    cd ADKF-IFT && bash ../fs_mol/run_test.sh
     ```
 
 ### MoleculeNet
 
 1. **calculate Fingerprints**
     ```
-    cd MoleculeNet/data && python fp_mixed
+    cd MoleculeNet/data && python fp_mixed.py
     ```
 
 2. **train**
     ```
-    cd MoleculeNet && bash run_train.sh
+    cd ADKF-IFT/MoleculeNet && bash ../../MoleculeNet/run_train.sh
     ```
+
+**Model Checkpoint**
+
+You can download the precaculated fingerprints and model checkpoint from [Google Drive](!https://drive.google.com/file/d/12yT5euhQkbYFr8gZ0mllNAGXXDF0LVcK/view?usp=sharing). After downloading and extracting, you will obtain files related to fs_mol and MoleculeNet respectively.
